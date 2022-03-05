@@ -10,7 +10,7 @@ const newsSlice = createSlice({
     extraReducers: (builder) => {
           builder.addCase(
             getNews.fulfilled, (state, action) => {
-              console.log(action)
+
               state.data.push(action.payload)
             }
           );

@@ -6,15 +6,13 @@ import {getNews} from '../../store/api'
 import { dataFormat } from '../../utils/dataFormat'
 
 function NewsCard(props) {
-  const dispatch = useDispatch()
-  const news = useSelector(state => state.news.data)
+  //const dispatch = useDispatch()
+  //const news = useSelector(state => state.news.data)
   //const date = dataFormat(news.time);
-  console.log(props)
-
-  React.useEffect(()=> {
-    dispatch(getNews(props.id))
-  },[])
- console.log(news)
+  const news =props.news
+  
+  
+ console.log(props)
 
   return (
     <article className='news__item'>

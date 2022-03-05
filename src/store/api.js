@@ -28,7 +28,6 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
     })
     
     const data = await response.json();
-    console.log(data)
       return data;
   })
 
