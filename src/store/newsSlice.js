@@ -1,8 +1,6 @@
 import { PayloadAction , createSlice } from '@reduxjs/toolkit'
 import {getNews, getComments} from './api.js'
 
-
-
 const newsSlice = createSlice({
     name: 'data',
     initialState: {
@@ -13,7 +11,7 @@ const newsSlice = createSlice({
           builder.addCase(
             getNews.fulfilled, (state, action) => {
               console.log(action)
-              state.data = action.payload
+              state.data.push(action.payload)
             }
           );
         }
