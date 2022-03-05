@@ -1,0 +1,27 @@
+.news-card__item {
+    margin: auto;
+    width: 90%;
+  
+}
+
+.news-card__comment {
+  margin: 100px auto 0;
+}
+
+.news-card__title{
+  font-size: 36px;
+}
+
+.news__back {
+  margin-top: 50px;
+  width: 100px;
+  height: 30px;
+  background: linear-gradient(rgb(255,255,255), rgb(240,240,240));
+  border: 1px solid grey;
+}
+
+.news__back:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  background: linear-gradient(rgb(231, 228, 228), rgb(190, 190, 190));
+}

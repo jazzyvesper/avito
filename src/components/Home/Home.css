@@ -1,0 +1,127 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.home__main {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home__items {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  flex-wrap: wrap;
+}
+.news__button_update {
+  background-image: url(../../images/updateicon.png);
+  border: 0;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+
+.news__button_filter {
+  background-image: url(../../images/filterIcon.png);
+  border: 0;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+.news__button_next {
+  width: 200px;
+  height: 40px;
+  border: 1px solid grey;
+  background-color: transparent;
+}
+
+.news__button_next:hover, .news__button_update:hover{
+  cursor: pointer;
+  opacity: 0.8;
+
+}
+
+.news__next {
+  display: flex;
+  margin: 40px auto;
+}
+
+.news__item {
+  max-width: 30%;
+  min-width: 300px;
+  min-height: 200px;
+  margin: 10px 0;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+
+.news__title_link:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.news__info {
+  margin: 5px 10px;
+  display: flex;
+  flex-direction: column;
+  height: 95%;
+  justify-content: space-between;
+}
+
+.news__title {
+  margin: 10px 0;
+  color:rgb(6, 6, 6);
+  text-align: center;
+  font-size: 20px;
+}
+
+.news__title_link {
+  text-decoration: none;
+}
+
+.news__row {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.news__descendants {
+  margin: 0;
+  width: 40px;
+}
+
+.news__rating {
+  position: absolute;
+  background-image: url(../../images/rating.png);
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  padding-left: 25px;
+}
+.news__time {
+  margin: 0;
+  align-self: end;
+  color:#5c5a5a;
+}
+
+.news__by {
+  margin: 0;
+}
