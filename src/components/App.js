@@ -1,33 +1,38 @@
 import './App.css';
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Home from '../Home/Home';
-import News from '../News/News';
+import Home from './Home';
+import News from './News';
 import {useSelector, useDispatch} from 'react-redux'
-import {getId} from '../../store/api'
+import {getIds} from '../store/api'
+import Skeleton from './Skeleton'
 
 function App() {
   const dispatch = useDispatch()
-  const id = useSelector(state => state.id.id)
-  const limitId = sortArr(id.slice(0, 10))
+  const {id, status, error} = useSelector(state => state.id)
+  const limitId = sortArr(id.slice(0, 100))
+  
   React.useEffect(()=> {
-    dispatch(getId())
+    dispatch(getIds())
   },[])
-  console.log(id)
+
+  
   function sortArr(arr) {
-    const NewMassiv = arr.sort(function(a, b) {
+    const sortArr = arr.sort(function(a, b) {
       if (a < b) return 1; 
       if (b < a) return -1;
       return 0;
       })
-      return NewMassiv
+      return sortArr
   }
 
   return (
     <div className="page">
       <Switch>
-        <Route exact path="/"> 
-          <Home id={limitId}/>
+        
+        {error && <h2>Произошла ошибка: {error}</h2>}
+        <Route exact path="/">
+          <Home skeleton={status} id={limitId}/>
         </Route>
         <Route path="/:id">
           <News />

@@ -1,7 +1,6 @@
 import React from 'react';
-import './Comments.css';
-import api from '../../utils/Api.js'
-import  { dataFormat } from '../../utils/dataFormat'
+import api from '../utils/Api.js'
+import  { dataFormat } from '../utils/dataFormat'
 
 function Comments (props) {
   const id = props.id;

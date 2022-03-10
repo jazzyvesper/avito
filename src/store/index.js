@@ -1,11 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
-import {requestsReducer} from './idSlice'
-import {newReducer} from './newsSlice'
+import {idSlice, newsSlice} from './reguestSlice'
 
 
 export default configureStore({
   reducer: {
-    id: requestsReducer,
-    news: newReducer
+    id: idSlice.reducer,
+    news: newsSlice.reducer
   }
 })

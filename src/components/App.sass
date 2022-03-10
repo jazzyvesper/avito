@@ -1,0 +1,196 @@
+%flexCol
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+%flexRow
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+%hover
+  cursor: pointer
+  opacity: 0.8
+%button
+  border: 0
+  margin: auto
+  width: 30px
+  height: 30px
+  background-size: contain
+  background-repeat: no-repeat
+  background-color: transparent
+.page
+  min-width: 303px
+  max-width: 1280px
+  box-sizing: border-box
+  margin: auto
+  font-family: "Inter",Arial,sans-serif
+  color: rgb(0, 0, 0)
+  position: relative
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  -webkit-text-size-adjust: 100%
+  -ms-text-size-adjust: 100%
+  -moz-text-size-adjust: 100%
+.home
+  @extend %flexCol
+  width: 90%
+  margin: auto
+  flex-wrap: wrap
+
+.home__main
+  @extend %flexRow
+  width: 100%
+
+.home__items
+  @extend %flexRow
+  margin: auto
+  width: 100%
+  flex-wrap: wrap
+
+.news__button_update
+  @extend %button
+  background-image: url(../images/updateicon.png)
+  margin: 0
+
+.news__button_filter
+  @extend %button
+  background-image: url(../images/filterIcon.png)
+  
+
+.news__button_next
+  width: 200px
+  height: 40px
+  border: 1px solid grey
+  background-color: transparent
+
+.news__button_next:hover, 
+.news__button_update:hover
+  @extend %hover
+
+.news__next
+  display: flex
+  margin: 40px auto
+
+.news__item
+  max-width: 30%
+  min-width: 300px
+  min-height: 200px
+  margin: 10px 0
+  background-color: #fff
+  border-radius: 10px
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+
+.news__title_link:hover
+  @extend %hover
+
+.news__info
+  @extend %flexCol
+  margin: 5px 10px
+  height: 95%
+
+.news__title
+  margin: 10px 0
+  color:rgb(6, 6, 6)
+  text-align: center
+  font-size: 20px
+
+.news__title_link
+  text-decoration: none
+  color: #000
+
+.news__row
+  @extend %flexRow
+  position: relative
+
+.news__descendants
+  margin: 0
+  width: 40px
+
+.news__rating
+  position: absolute
+  background-image: url(../images/rating.png)
+  width: 20px
+  height: 20px
+  background-size: contain
+  background-repeat: no-repeat
+  background-color: transparent
+  padding-left: 25px
+
+.news__time
+  margin: 0
+  align-self: end
+  color:#5c5a5a
+
+.news__by
+  margin: 0
+
+.news-card__item
+  margin: auto
+  width: 90%
+
+.news-card__comment
+  margin: 0
+
+.news-card__title
+  font-size: 36px
+
+.news__back
+  margin-top: 50px
+  width: 100px
+  height: 30px
+  background: linear-gradient(rgb(255,255,255), rgb(240,240,240))
+  border: 1px solid grey
+
+.news__back:hover
+  @extend %hover
+  background: linear-gradient(rgb(231, 228, 228), rgb(190, 190, 190))
+
+.comments__item
+  @extend %flexCol
+  border-bottom: 1px solid grey
+  padding: 20px 5px
+
+.comments__title
+  @extend %flexRow
+  width: 30%
+
+.comments__parent
+  font-size: 14px
+
+.comments__parent p
+  line-height: normal
+  margin: 0
+  padding: 5px 0
+  text-indent: 10px
+
+.comments__info_text
+  margin: 20px auto
+.comments__parent p:first-letter
+  line-height: 1
+  text-transform: capitalize
+
+.comments__back
+  font-size: 14px
+  font-weight: 400
+  margin: 0
+
+pre
+  margin: 0
+
+.comments__by
+  margin: 0
+  font-size: 18px
+  font-weight: 900
+
+.comments__time
+  margin: 0;
+
+.comments__children
+  padding-left: 60px
+  font-size: 12px
+
+.comments__info
+  display: flex
+  justify-content: start
+  gap: 20px
+  align-items: center
+  margin-bottom: 10px

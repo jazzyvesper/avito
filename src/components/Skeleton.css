@@ -1,0 +1,88 @@
+@-webkit-keyframes flareAnimation {
+  0% {
+    left: -150%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+@keyframes flareAnimation {
+  0% {
+    left: -150%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+.sceleton {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.skeleton__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.skeleton__title {
+  width: 90%;
+  height: 80px;
+  margin: 20px auto;
+  border-radius: 10px;
+  background-color: #dddbdb;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.skeleton__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px;
+}
+
+.skeleton__icon {
+  width: 30%;
+  height: 30px;
+  margin: auto;
+  border-radius: 10px;
+  background-color: #dddbdb;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.flare {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 45px;
+  -webkit-transform: skewX(-45deg);
+          transform: skewX(-45deg);
+  -webkit-animation: flareAnimation;
+          animation: flareAnimation;
+  left: -150%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(172, 175, 173, 0.1)), to(rgba(255, 255, 255, 0.4)));
+  background: linear-gradient(90deg, rgba(172, 175, 173, 0.1), rgba(255, 255, 255, 0.4));
+  -webkit-animation: flareAnimation 3s infinite linear;
+          animation: flareAnimation 3s infinite linear;
+}
+/*# sourceMappingURL=Skeleton.css.map */

@@ -10,8 +10,8 @@ export function dataFormat(num) {
   
     //время публикации новости
     const dateNews = `${day} ${month} ${hours}:${minutes}`
-    const today = `${day} ${month} ${year}`.toString() == todayDate.toString() ? true : false
-    const convertDate = !today ? dateNews : `${hours}:${minutes}`
+    const today = `${day} ${month} ${year}`.toString() === todayDate.toString()
+    const convertDate = !today ? dateNews : `Сегодня ${hours}:${minutes}`
     const fullConvertDate =  `${hours}:${minutes} ${day} ${month} ${year}`
    
     return {convertDate ,fullConvertDate}
